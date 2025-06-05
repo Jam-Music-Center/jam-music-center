@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Jam Music Center</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    input {
+      margin: 8px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>Jam Music Center - Developer Login</h2>
+  <input type="text" id="username" placeholder="Username" />
+  <input type="password" id="password" placeholder="Password" />
+  <button onclick="checkLogin()">Login</button>
+  <p class="error" id="error"></p>
+
+  <script>
+    function checkLogin() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Set your desired login credentials
+      if (username === "admin" && password === "bogeyman19") {
+        window.location.href = "index.html";  // Redirect to your main site
+      } else {
+        document.getElementById('error').innerText = "Incorrect username or password.";
+      }
+    }
+  </script>
+</body>
+</html>
