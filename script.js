@@ -33,8 +33,19 @@ const catalog = document.getElementById("catalog");
 products.forEach((product, index) => {
   const card = document.createElement("div");
   card.className = `card ${index % 2 === 0 ? 'white' : 'grey'}`;
-  card.innerHTML = `
-    <img src="${product.image}" alt="${product.name}" />
+
+  const img = document.createElement("img");
+  img.src = product.image;
+  img.alt = product.name;
+
+  // If image fails to load, use placeholder and add animation
+  img.onerror = () => {
+    img.src = "assets/images/no-image.png"; // adjust if your HTML is in a subfolder
+    img.classList.add("placeholder");
+  };
+
+  card.appendChild(img);
+  card.innerHTML += `
     <h3>${product.name}</h3>
     <p><strong>Model:</strong> ${product.model}</p>
     <p><strong>Category:</strong> ${product.category}</p>
@@ -42,5 +53,6 @@ products.forEach((product, index) => {
     <p><strong>Stock:</strong> ${product.stock}</p>
     <p>${product.description}</p>
   `;
+
   catalog.appendChild(card);
 });

@@ -41,14 +41,27 @@ header, footer {
 .card img {
   width: 100%;
   border-radius: 10px;
-  object-fit: cover;
-  max-height: 200px;
+  object-fit: contain;
+  max-height: 300px;
+  background: white;
 }
 
+/* Alternate tile background */
 .white { background-color: white; color: black; }
 .grey  { background-color: #f0f0f0; color: black; }
 
 @media (prefers-color-scheme: dark) {
   .white { background-color: #1c1c1c; color: white; }
   .grey  { background-color: #2a2a2a; color: white; }
+}
+
+/* Placeholder image class with animation */
+.placeholder {
+  animation: rotatePlaceholder 4s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes rotatePlaceholder {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
