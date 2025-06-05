@@ -1,6 +1,6 @@
 /login.html     /login.html     200
 /index.html     /index.html     200
-/styles.css     /style.css      200
+/style.css      /style.css      200
 /script.js      /script.js      200
 /assets/*       /assets/:splat  200
 /*              /login.html     302!
