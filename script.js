@@ -6,7 +6,7 @@ const products = [
     price: "₹7,500",
     stock: "12 in stock",
     description: "Great beginner-friendly guitar with a warm tone.",
-    image: "https://dn9ml16rd2hb8.cloudfront.net/2019/09/187-3972-Fender-Acoustic-Guitar_MG_2913.jpg"
+    image: "" //https://dn9ml16rd2hb8.cloudfront.net/2019/09/187-3972-Fender-Acoustic-Guitar_MG_2913.jpg
   },
   {
     name: "Digital Keyboard",
